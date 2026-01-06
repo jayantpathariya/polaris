@@ -7,9 +7,14 @@ const Page = () => {
     await fetch("/api/demo/blocking", { method: "POST" });
   };
 
+  const handleUnblocking = async () => {
+    await fetch("/api/demo/background", { method: "POST" });
+  };
+
   return (
     <div className="p-8 space-x-4">
       <Button onClick={handleBlocking}>Blocking</Button>
+      <Button onClick={handleUnblocking}>Background</Button>
     </div>
   );
 };
